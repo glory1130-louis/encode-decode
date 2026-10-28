@@ -9,6 +9,10 @@ mode = tk.StringVar(value="encode")
 
 def f():
     label5.config(text=mode.get())
+    if mode.get() == "encode":
+        print("encode")
+    else:
+        print("decode")
 
 label1 = tk.Label(root, text="Message").place(x=60, y=60)
 entry_message = tk.Entry(root, textvariable=message).place(x=240, y=60)
